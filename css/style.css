@@ -1,0 +1,267 @@
+@-webkit-keyframes FADE 
+   {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+@-webkit-keyframes action{
+            0%{
+                transform: translateX(0px);
+            }
+
+            50%{
+                transform: translateX(-2vw);
+
+            }
+            100%{
+                transform: translateX(-2vw);
+            }
+        }
+
+
+@-webkit-keyframes kill {
+  0% {opacity: 0%;}
+
+  100% {opacity: 100%;}
+}
+
+@-webkit-keyframes this {
+  0% {opacity: 0%;}
+
+  100% {opacity: 100%;}
+}
+
+@-webkit-keyframes foot {
+  0% {opacity: 0%;}
+
+  100% {opacity: 100%;}
+}
+
+@-webkit-keyframes thunder {
+
+  0% {opacity: 100%;}
+
+  25% {opacity: 0%}
+
+  50% {opacity: 50%}
+
+  100% {opacity: 100%;}
+}
+
+
+
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  margin: 0%;
+  height: 100%;
+  opacity: 100%;
+  animation-name: thunder;
+  animation-duration: 0.8s;
+  animation-delay: 7.3s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  margin: 0%;
+  height: 100%;
+  opacity: 100%;
+  background-color: black;
+}
+
+  .play-btn {
+  position: absolute;
+  top: 41%;
+  left: 40%;
+  width: 20%;
+  opacity: 70%;
+  display: inline-block;
+  }
+
+  .play-btn:hover {
+  position: absolute;
+  opacity: 100%;
+  transform: scale(1.4);
+  transition: all ease-in-out 0.5s;
+
+
+  }
+
+  .lets {
+  position: absolute;
+  top: 95%;
+  left: 35%;
+  width: 30%;
+  }
+
+  .s_bp {
+  position: absolute;
+  top: 80%;
+  left: 41%;
+  width: 18%;
+  opacity: 70%
+
+  }
+
+  .list{
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 100%;
+  animation-name: foot;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+  
+  }
+
+  .bp{
+  position: absolute;
+  top: 18%;
+  left: 0%;
+  width: 100%;
+  animation-name: foot;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+  
+  }
+
+  .date{
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  width: 100%;
+  animation-name: foot;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+  
+  }
+
+  .yg{
+  position: absolute;
+  top: 92%;
+  left: 0%;
+  width: 100%;
+  animation-name: foot;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+  
+  }
+
+
+
+  .kill {
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  width: 55%;
+  animation-name: kill;
+  animation-delay: 2.9s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+
+  }
+
+ 
+  .this {
+  position: absolute;
+  top: 35%;
+  left: 23%;
+  width: 55%;
+  animation-name: this;
+  animation-delay: 3.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode:both;
+  animation-timing-function: ease-in-out;
+  }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5vw;
+            font-family: "Futura", sans-serif;
+        }
+       
+        h1{
+            position: relative;
+            color:transparent;
+            caret-color:white;
+            outline: none;
+            cursor:text;
+            opacity: 0;
+            white-space: nowrap;
+            animation: FADE;
+            animation-duration: 0.5s;
+            -webkit-animation-delay: 3.6s;
+            animation-fill-mode: forwards;
+
+        }
+
+
+        h1::before,
+        h1::after{
+            content: attr(data-content);
+            position: absolute;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            color: #ff8daa;
+            font-size: inherit;
+            font-weight: 760;
+
+        }
+        h1::after{
+            height: 41%;
+            top: 60%;
+        }
+        h1:not(:focus)::after{
+            animation: action 2s;
+            animation-iteration-count: 1;
+            animation-delay: 3.8s;
+            animation-fill-mode: forwards;
+        }
+        h1::before{
+            display: flex;
+            align-items: flex-end;
+            top: 100%;
+            height: 50%;
+        }
+        
+
+
+
+
